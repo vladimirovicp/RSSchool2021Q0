@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 1240px;
+    min-height: 100vh;
+    background-color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #bdae82;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 150px);
+    min-height: 600px;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.viewer {
+    width: calc(100% + 2px);
+    height: auto;
+    border: 1px solid #bdae82;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.player button {
+    cursor: pointer;
+    position: relative;
+    margin-right: 7px;
+    font-size: 12px;
+    padding: 3px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-right: 5px;
+}
+
+.layer__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 1px;
+    width: calc(100% - 2px);
+    transition: all 0.2s ease;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.player .layer__controls svg {
+    width: 28px;
+    height: 28px;
+    fill: #b3b3b3;
+    stroke: #b3b3b3;
+    cursor: pointer;
+}
+
+.player .layer__controls svg:hover {
+    fill: #bdae82;
+}
+
+.progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    transition: height 0.3s;
+    background: rgba(200, 200, 200, 0.5);
+    cursor: ew-resize;
+    height: 15px;
+    margin-bottom: 5px;
+}
+
+.progress__filed {
+    width: 50%;
+    background-color: #ffc600;
+    flex: 0;
+    flex-basis: 0%;
+}
+
+.volume-controls {
+    display: flex;
+    align-items: center;
+}
+
+.player__slider {
+    margin-right: 10px;
+}
+
+.right-controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.play-btn {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 3;
+    background-image: url(../img/svg/play-btn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.play-btn:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+#footer .container {
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-data {
+    display: flex;
+}
+
+.soc-icon {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+    transition: fill 0.5s;
+}
+
+.soc-icon:hover {
+    fill: #bdae82;
+}
+
+.footer-data span {
+    margin-right: 20px;
+}
+
+.social-networks {
+    display: flex;
+    align-items: center;
+}
+
+.social-networks a {
+    display: flex;
+    padding-right: 20px;
+}
+
+.social-networks a:last-child {
+    padding-right: 0;
+}
+
+.logo-rs {
+    background-image: url("../svg/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    width: 150px;
+    height: 55px;
+    display: block;
+    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(100deg) brightness(100%) contrast(100%);
+}
+
+.logo-rs:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
